@@ -72,31 +72,15 @@ ext {
 		jug: '3.1.4',
 		springfoxSwagger2: '2.7.0'
 	]
-	test_versions = [
-		assertJ: '3.6.2',
-		equalsVerifier: '2.2.2',
-		jsonSchema: '1.0.21',
-		jsonSchemaValidator: '2.2.6',
-		junit: '4.12',
-		junitParams: '1.1.0',
-		mockito: '2.7.22',
-	]
 }
 
 ext.app_tests = [
-		integration_test: [
-				"com.kjetland:mbknor-jackson-jsonschema_2.12:${test_versions.jsonSchema}",
-				"com.github.fge:json-schema-validator:${test_versions.jsonSchemaValidator}"
-		],
 		spring_test: [
-				"org.springframework.boot:spring-boot-starter-test",
+			"org.springframework.boot:spring-boot-starter-test",
 		],
 		unit_test: [
-				"junit:junit:${test_versions.junit}",
-				"nl.jqno.equalsverifier:equalsverifier:${test_versions.equalsVerifier}",
-				"org.assertj:assertj-core:${test_versions.assertJ}",
-				"org.mockito:mockito-core:${test_versions.mockito}",
-				"pl.pragmatists:JUnitParams:${test_versions.junitParams}"
+			"org.jetbrains.kotlin:kotlin-test",
+			"org.jetbrains.kotlin:kotlin-test-junit"
 		]
 ]
 
