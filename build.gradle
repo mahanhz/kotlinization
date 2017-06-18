@@ -72,6 +72,9 @@ ext {
 		jug: '3.1.4',
 		springfoxSwagger2: '2.7.0'
 	]
+	test_versions = [
+		kotlinTest: '2.0.3'
+	]
 }
 
 ext.app_tests = [
@@ -79,6 +82,7 @@ ext.app_tests = [
 			"org.springframework.boot:spring-boot-starter-test",
 		],
 		unit_test: [
+			"io.kotlintest:kotlintest:${test_versions.kotlinTest}",
 			"org.jetbrains.kotlin:kotlin-test",
 			"org.jetbrains.kotlin:kotlin-test-junit"
 		]

@@ -1,7 +1,8 @@
 package com.example.clean.app.core.domain
 
-import org.apache.commons.lang3.StringUtils
-import org.apache.commons.lang3.Validate
+import org.apache.commons.lang3.StringUtils.trim
+import org.apache.commons.lang3.Validate.isTrue
+import org.apache.commons.lang3.Validate.notBlank
 
 class LastName(value: String) {
     val value: String
@@ -11,8 +12,8 @@ class LastName(value: String) {
     }
 
     private fun validate(input: String): String {
-        val trimmed = StringUtils.trim(input)
-        Validate.isTrue(trimmed.length <= MAX_LENGTH)
+        val trimmed = trim(notBlank(input))
+        isTrue(trimmed.length <= MAX_LENGTH)
 
         return trimmed
     }
