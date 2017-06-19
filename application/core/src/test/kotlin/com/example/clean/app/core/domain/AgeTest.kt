@@ -1,7 +1,5 @@
 package com.example.clean.app.core.domain
 
-import com.example.clean.app.core.domain.Age.Companion.MAX_AGE
-import com.example.clean.app.core.domain.Age.Companion.MIN_AGE
 import com.example.clean.app.core.helper.ExceptionHelper.invalidMatching
 import com.example.clean.app.core.helper.ExceptionHelper.valid
 import com.example.clean.app.core.helper.NoException

@@ -1,6 +1,5 @@
 package com.example.clean.app.core.domain
 
-import com.example.clean.app.core.domain.FirstName.Companion.MAX_LENGTH
 import com.example.clean.app.core.helper.ExceptionHelper.invalidMatching
 import com.example.clean.app.core.helper.ExceptionHelper.valid
 import com.example.clean.app.core.helper.NoException
@@ -18,10 +17,10 @@ class FirstNameTest : StringSpec() {
             val valuesTable = table(
                     headers("value", "result"),
                     row("John", valid()),
-                    row(repeat("x", MAX_LENGTH), valid()),
+                    row(repeat("x", FIRSTNAME_MAX_LENGTH), valid()),
                     row("", invalidMatching(IllegalArgumentException::class.java)),
                     row(" ", invalidMatching(IllegalArgumentException::class.java)),
-                    row(repeat("x", MAX_LENGTH + 1), invalidMatching(IllegalArgumentException::class.java))
+                    row(repeat("x", FIRSTNAME_MAX_LENGTH + 1), invalidMatching(IllegalArgumentException::class.java))
             )
             forAll(valuesTable) { value, result ->
                 var actualException: Class<out Exception> = NoException::class.java

@@ -4,6 +4,8 @@ import org.apache.commons.lang3.StringUtils.trim
 import org.apache.commons.lang3.Validate.isTrue
 import org.apache.commons.lang3.Validate.notBlank
 
+const val LASTNAME_MAX_LENGTH = 25
+
 class LastName(value: String) {
     val value: String
 
@@ -13,13 +15,8 @@ class LastName(value: String) {
 
     private fun validate(input: String): String {
         val trimmed = trim(notBlank(input))
-        isTrue(trimmed.length <= MAX_LENGTH)
+        isTrue(trimmed.length <= LASTNAME_MAX_LENGTH)
 
         return trimmed
-    }
-
-    companion object {
-
-        val MAX_LENGTH = 25
     }
 }

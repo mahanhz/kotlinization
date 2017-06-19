@@ -1,6 +1,5 @@
 package com.example.clean.app.core.domain
 
-import com.example.clean.app.core.domain.Suffix.Companion.MAX_LENGTH
 import com.example.clean.app.core.helper.ExceptionHelper.invalidMatching
 import com.example.clean.app.core.helper.ExceptionHelper.valid
 import com.example.clean.app.core.helper.NoException
@@ -18,10 +17,10 @@ class SuffixTest : StringSpec() {
             val valuesTable = table(
                     headers("value", "result"),
                     row("John", valid()),
-                    row(repeat("x", MAX_LENGTH), valid()),
+                    row(repeat("x", SUFFIX_MAX_LENGTH), valid()),
                     row("", valid()),
                     row(" ", valid()),
-                    row(repeat("x", MAX_LENGTH + 1), invalidMatching(IllegalArgumentException::class.java))
+                    row(repeat("x", SUFFIX_MAX_LENGTH + 1), invalidMatching(IllegalArgumentException::class.java))
             )
             forAll(valuesTable) { value, result ->
                 var actualException: Class<out Exception> = NoException::class.java
