@@ -61,7 +61,6 @@ project("application:core") {
 	description = "Application core"
 
 	dependencies {
-		compile group: 'com.google.guava', name: 'guava', version: "${versions.guava}"
 		compile group: 'org.apache.commons', name: 'commons-lang3', version: "${versions.commonsLang}"
 
 		testCompile app_tests.unit_test

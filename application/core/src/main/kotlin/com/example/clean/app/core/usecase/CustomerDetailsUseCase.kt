@@ -6,7 +6,7 @@ import com.example.clean.app.core.domain.Customer
 import com.example.clean.app.core.domain.Id
 
 
-class CustomerDetailsUseCase(val customerRepository: CustomerRepository) : CustomerService {
+class CustomerDetailsUseCase(private val customerRepository: CustomerRepository) : CustomerService {
 
     override fun customers(): List<Customer> {
         return customerRepository.customers()
