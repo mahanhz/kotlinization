@@ -1,7 +1,7 @@
 package com.example.clean.app.data.repository
 
-import com.example.clean.app.core.helper.DomainHelper.customer
 import com.example.clean.app.data.JpaRepositoryHelper.customerEntity
+import com.example.clean.app.data.helper.DomainHelper.customer
 import com.example.clean.app.data.jpa.repository.CustomerJpaRepository
 import io.kotlintest.mock.mock
 import io.kotlintest.specs.FunSpec

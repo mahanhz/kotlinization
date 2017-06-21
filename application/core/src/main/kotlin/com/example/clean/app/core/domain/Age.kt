@@ -13,4 +13,23 @@ class Age(value: Int) {
 
         this.value = value
     }
+
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (other?.javaClass != javaClass) return false
+
+        other as Age
+
+        if (value != other.value) return false
+
+        return true
+    }
+
+    override fun hashCode(): Int {
+        return value
+    }
+
+    override fun toString(): String {
+        return "Age(value=$value)"
+    }
 }

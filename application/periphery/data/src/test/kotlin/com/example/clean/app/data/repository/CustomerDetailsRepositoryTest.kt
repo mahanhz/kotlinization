@@ -2,8 +2,8 @@ package com.example.clean.app.data.repository
 
 import com.example.clean.app.core.domain.Customer
 import com.example.clean.app.core.domain.Id
-import com.example.clean.app.core.helper.DomainHelper
 import com.example.clean.app.data.JpaRepositoryHelper.customerEntity
+import com.example.clean.app.data.helper.DomainHelper
 import com.example.clean.app.data.jpa.repository.CustomerJpaRepository
 import io.kotlintest.matchers.haveSize
 import io.kotlintest.matchers.shouldBe

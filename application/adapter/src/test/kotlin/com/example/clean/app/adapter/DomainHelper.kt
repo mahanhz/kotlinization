@@ -1,4 +1,4 @@
-package com.example.clean.app.data.helper
+package com.example.clean.app.adapter.helper
 
 import com.example.clean.app.core.domain.*
 
