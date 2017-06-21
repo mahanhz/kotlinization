@@ -5,7 +5,7 @@ import com.example.clean.app.core.domain.*
 import com.example.clean.app.data.jpa.entity.CustomerEntity
 import com.example.clean.app.data.jpa.entity.Name
 import com.example.clean.app.data.jpa.repository.CustomerJpaRepository
-import java.util.stream.Collectors.toList
+import kotlin.streams.toList
 
 
 class CustomerDetailsRepository(val customerJpaRepository: CustomerJpaRepository) : CustomerRepository {
@@ -14,8 +14,8 @@ class CustomerDetailsRepository(val customerJpaRepository: CustomerJpaRepository
         val customers = customerJpaRepository.findAll()
 
         return customers.stream()
-                .map(this::customer)
-                .collect(toList())
+                .map { customer(it) }
+                .toList()
     }
 
     override fun customer(customerId: Id): Customer {
