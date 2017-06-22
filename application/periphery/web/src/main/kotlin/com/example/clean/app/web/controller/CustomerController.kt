@@ -41,8 +41,8 @@ class CustomerController @Autowired constructor(private val customerAdapter: Cus
 
         val selfLink = linkTo(methodOn<CustomerController>(CustomerController::class.java).customer(customerId))
 
-        val updateLink = linkTo(CustomerController::class).slash(customerId)
-        val deleteLink = linkTo(CustomerController::class).slash(customerId)
+        val updateLink = linkTo(CustomerController::class.java).slash(customerId)
+        val deleteLink = linkTo(CustomerController::class.java).slash(customerId)
 
         val customerDto = Resource(customerAdapter.customer(customerId))
         customerDto.add(selfLink.withSelfRel())

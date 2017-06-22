@@ -8,7 +8,7 @@ project("application") {
 	}
 
 	springBoot {
-		mainClass = 'com.example.clean.app.MainApplication'
+		mainClass = 'com.example.clean.app.MainApplicationKt'
 
 		buildInfo {
 			additionalProperties = [

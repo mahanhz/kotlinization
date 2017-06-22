@@ -4,7 +4,7 @@ import javax.persistence.MappedSuperclass
 import javax.persistence.Version
 
 @MappedSuperclass
-class BaseEntity {
+open class BaseEntity {
 
     @Version
     var version: Int = 0

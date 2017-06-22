@@ -3,7 +3,7 @@ package com.example.clean.app.data.jpa.entity
 import javax.persistence.*
 
 @Entity(name = "customer_t")
-class CustomerEntity {
+class CustomerEntity : BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

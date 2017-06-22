@@ -14,7 +14,7 @@ const val REL_CUSTOMER_PREFIX = "customer-"
 object CommonLinks {
 
     fun homeLink(): Link {
-        val homeLink = linkTo(IndexController::class)
+        val homeLink = linkTo(IndexController::class.java)
         return homeLink.withRel(REL_HOME)
     }
 

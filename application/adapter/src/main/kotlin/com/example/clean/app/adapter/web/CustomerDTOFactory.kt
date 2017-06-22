@@ -1,6 +1,5 @@
 package com.example.clean.app.adapter.web
 
-import com.example.clean.app.adapter.web.api.AgeDTO
 import com.example.clean.app.adapter.web.api.CustomerDTO
 import com.example.clean.app.adapter.web.api.NameDTO
 import com.example.clean.app.core.domain.Customer
@@ -19,7 +18,7 @@ object CustomerDTOFactory {
     fun customer(customer: Customer): CustomerDTO {
         return CustomerDTO(customer.id.value,
                            name(customer.name),
-                           AgeDTO(customer.age.value))
+                           customer.age.value)
     }
 
     private fun name(name: Name): NameDTO {
