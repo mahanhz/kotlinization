@@ -17,7 +17,7 @@ class AdapterConfig {
     lateinit var customerEditService: CustomerEditService
 
     @Bean
-    open fun customerAdapter(): CustomerAdapter {
+    fun customerAdapter(): CustomerAdapter {
         return CustomerAdapter(customerService, customerEditService)
     }
 }

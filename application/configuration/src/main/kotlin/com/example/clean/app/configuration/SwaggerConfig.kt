@@ -16,7 +16,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2
 class SwaggerConfig {
 
     @Bean
-    open fun api(): Docket {
+    fun api(): Docket {
         return Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.example.clean.app.web.controller"))
@@ -27,7 +27,7 @@ class SwaggerConfig {
     // Make Swagger read-only when in production
     @Bean
     @Profile("production")
-    open fun uiConfig(): UiConfiguration {
+    fun uiConfig(): UiConfiguration {
         return UiConfiguration(null, NO_SUBMIT_METHODS)
     }
 }

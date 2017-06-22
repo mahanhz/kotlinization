@@ -20,12 +20,12 @@ class UsecaseConfig {
     lateinit var customerEditRepository: CustomerEditRepository
 
     @Bean
-    open fun customerService(): CustomerService {
+    fun customerService(): CustomerService {
         return CustomerDetailsUseCase(customerRepository)
     }
 
     @Bean
-    open fun customerEditService(): CustomerEditService {
+    fun customerEditService(): CustomerEditService {
         return CustomerEditUseCase(customerEditRepository)
     }
 }

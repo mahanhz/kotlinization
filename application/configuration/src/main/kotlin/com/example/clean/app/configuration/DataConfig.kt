@@ -21,12 +21,12 @@ class DataConfig {
     lateinit var customerJpaRepository: CustomerJpaRepository
 
     @Bean
-    open fun customerRepository(): CustomerRepository {
+    fun customerRepository(): CustomerRepository {
         return CustomerDetailsRepository(customerJpaRepository)
     }
 
     @Bean
-    open fun customerEditRepository(): CustomerEditRepository {
+    fun customerEditRepository(): CustomerEditRepository {
         return CustomerOperationsRepository(customerJpaRepository)
     }
 }

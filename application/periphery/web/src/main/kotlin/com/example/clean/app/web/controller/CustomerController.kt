@@ -4,7 +4,6 @@ import com.example.clean.app.adapter.web.CustomerAdapter
 import com.example.clean.app.adapter.web.api.CustomerDTO
 import com.example.clean.app.adapter.web.api.CustomersDTO
 import org.apache.commons.lang3.Validate
-import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.hateoas.Link
 import org.springframework.hateoas.Resource
 import org.springframework.hateoas.mvc.ControllerLinkBuilder
@@ -18,7 +17,7 @@ import kotlin.streams.toList
 
 @RestController
 @RequestMapping(path = arrayOf("/api/customers"), produces = arrayOf(APPLICATION_JSON_V1_VALUE))
-class CustomerController @Autowired constructor(private val customerAdapter: CustomerAdapter) {
+class CustomerController(private val customerAdapter: CustomerAdapter) {
 
     @GetMapping
     fun customers(): ResponseEntity<Resource<CustomersDTO>> {
