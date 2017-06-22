@@ -24,7 +24,7 @@ class CustomerController(private val customerAdapter: CustomerAdapter) {
 
         val selfLink = linkTo(methodOn<CustomerController>(CustomerController::class.java).customers())
 
-        val createLink = linkTo(CustomerController::class.java!!)
+        val createLink = linkTo(CustomerController::class.java)
 
         val customersDto = Resource(customerAdapter.customers())
         customersDto.add(selfLink.withSelfRel())

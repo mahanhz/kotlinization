@@ -32,7 +32,7 @@ class ErrorHandlerController @Autowired constructor(private val errorAttributes:
     private fun errorAttributes(request: HttpServletRequest): Map<String, Any> {
         val requestAttributes = ServletRequestAttributes(request)
 
-        return errorAttributes!!.getErrorAttributes(requestAttributes, false)
+        return errorAttributes.getErrorAttributes(requestAttributes, false)
     }
 
     private fun convertErrorAttributes(request: HttpServletRequest): Map<String, String> {

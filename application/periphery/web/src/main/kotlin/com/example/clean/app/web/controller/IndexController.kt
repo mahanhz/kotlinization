@@ -15,7 +15,7 @@ class IndexController {
     @GetMapping
     fun index(): ResponseEntity<ResourceSupport> {
 
-        val indexLink = linkTo(IndexController::class.java!!)
+        val indexLink = linkTo(IndexController::class.java)
 
         val resourceSupport = ResourceSupport()
         resourceSupport.add(indexLink.withSelfRel())
