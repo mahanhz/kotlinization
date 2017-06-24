@@ -1,7 +1,6 @@
 package com.example.clean.app.web.controller.exception
 
 import com.example.clean.app.web.controller.APPLICATION_VND_ERROR_JSON_VALUE
-import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.autoconfigure.web.ErrorAttributes
 import org.springframework.boot.autoconfigure.web.ErrorController
 import org.springframework.hateoas.VndErrors
@@ -14,7 +13,7 @@ import javax.servlet.http.HttpServletRequest
 const val ERROR_PATH = "/error"
 
 @RestController
-class ErrorHandlerController @Autowired constructor(private val errorAttributes: ErrorAttributes) : ErrorController {
+class ErrorHandlerController(private val errorAttributes: ErrorAttributes) : ErrorController {
 
     @GetMapping(value = ERROR_PATH, produces = arrayOf(APPLICATION_VND_ERROR_JSON_VALUE))
     fun error(request: HttpServletRequest): ResponseEntity<VndErrors> {
