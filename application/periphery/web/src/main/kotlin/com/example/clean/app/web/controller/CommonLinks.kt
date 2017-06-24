@@ -1,8 +1,8 @@
 package com.example.clean.app.web.controller
 
 import org.springframework.hateoas.Link
-import org.springframework.hateoas.mvc.ControllerLinkBuilder
 import org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo
+import org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn
 
 const val REL_HOME = "home"
 const val REL_CUSTOMERS = "customers"
@@ -19,7 +19,7 @@ object CommonLinks {
     }
 
     fun customersLink(): Link {
-        val customersLink = linkTo(ControllerLinkBuilder.methodOn<CustomerController>(CustomerController::class.java).customers())
+        val customersLink = linkTo(methodOn(CustomerController::class.java).customers())
         return customersLink.withRel(REL_CUSTOMERS)
     }
 }
