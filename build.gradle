@@ -70,7 +70,7 @@ ext {
 	versions = [
 		commonsLang: '3.5',
 		guava: '21.0',
-		jackson: '2.8.8',
+		jacksonKotlin: '2.9.0.pr4',
 		jug: '3.1.4',
 		springfoxSwagger2: '2.7.0'
 	]
