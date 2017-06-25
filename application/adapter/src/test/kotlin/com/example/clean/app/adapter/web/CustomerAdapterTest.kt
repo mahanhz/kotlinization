@@ -34,7 +34,7 @@ class CustomerAdapterTest : FunSpec() {
             id shouldBe customer().id.value
             name.firstName shouldBe customer().name.firstName.value
             name.lastName shouldBe customer().name.lastName.value
-            age.age shouldBe customer().age.value
+            age shouldBe customer().age.value
         }
 
         test("Should get customer") {
@@ -44,7 +44,7 @@ class CustomerAdapterTest : FunSpec() {
 
             customer.name.firstName shouldBe customer().name.firstName.value
             customer.name.lastName shouldBe customer().name.lastName.value
-            customer.age.age shouldBe customer().age.value
+            customer.age shouldBe customer().age.value
         }
 
         test("Should create customer") {

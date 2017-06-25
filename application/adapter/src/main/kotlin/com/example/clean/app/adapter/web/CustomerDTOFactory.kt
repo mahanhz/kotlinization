@@ -18,7 +18,8 @@ object CustomerDTOFactory {
     fun customer(customer: Customer): CustomerDTO {
         return CustomerDTO(customer.id.value,
                            name(customer.name),
-                           customer.age.value)
+                           customer.age.value,
+                           customer.canPurchaseFireworks())
     }
 
     private fun name(name: Name): NameDTO {
